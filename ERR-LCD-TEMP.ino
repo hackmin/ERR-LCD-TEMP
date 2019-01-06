@@ -69,8 +69,7 @@ void DisplayLCD(){
   u8g2.setFont(u8g2_font_helvB12_tf);
   
   /* ------- LINE 1 ------- */
-  if (menu == 1 && previousBlink) line1 = macAddress;  
-  if (menu != 1) line1 = String(txtTemp0).substring(0, 4) + " | " + String(txtTemp1).substring(0, 4) + " | " ;
+  line1 = String(txtTemp0).substring(0, 4) + " | " + String(txtTemp1).substring(0, 4) + " | " ;
 
   u8g2.drawStr(0,12, line1.c_str() );
   
